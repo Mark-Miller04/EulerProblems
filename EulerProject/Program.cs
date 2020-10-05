@@ -1,12 +1,17 @@
 ﻿using System;
 using UtilityLibrary;
 
+// TODO: Make program objects to simplify program operation process.
+// TODO: Add problem number, question, and solve method.
+// TODO: Add safe ways to accept any user input for all programs.
+
 namespace EulerProject
 {
 	class Program
 	{
 		public static string[] programList = {
-			"1: Multiples of 3 and 5.\n"
+			"1: Multiples of 3 and 5.",
+			"2: Even Fibonacci Numbers."
 		};
 
 		static void Main(string[] args)
@@ -18,6 +23,9 @@ namespace EulerProject
 			{
 				case 1:
 					Problem1();
+					break;
+				case 2:
+					Problem2();
 					break;
 				case 0:
 				default:
@@ -61,7 +69,6 @@ namespace EulerProject
 		{
 			Console.Clear();
 			Console.WriteLine("===== Problem 1 =====");
-			Console.WriteLine("If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.");
 			Console.WriteLine("Find the sum of all the multiples of 3 or 5 below 1000.\n");
 
 			int sum = 0;
@@ -81,6 +88,29 @@ namespace EulerProject
 			}
 
 			Console.WriteLine($"The sum of all multiples of 3 or 5 below 1000 is {sum}.");
+		}
+
+		private static void Problem2()
+		{
+			Console.Clear();
+			Console.WriteLine("===== Problem 2 =====");
+			Console.WriteLine("Find the sum of all even Fibonacci numbers that are less than 4 million.\n");
+
+			int sum = 0;
+			int last = 0;
+			int current = 1;
+			while (current < 4000000)
+			{
+				if (current % 2 == 0) {
+					sum += current;
+				}
+
+				int temp = current;
+				current += last;
+				last = temp;
+			}
+
+			Console.WriteLine($"The sum of these numbers is {sum}.");
 		}
 	}
 }
