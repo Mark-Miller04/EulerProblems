@@ -1,4 +1,5 @@
 ﻿using System;
+using UtilityLibrary;
 
 namespace EulerProject
 {
@@ -10,8 +11,11 @@ namespace EulerProject
 
 		static void Main(string[] args)
 		{
-			WriteProgramList();
-			int prog = SelectProgram();
+			//WriteProgramList();
+			int prog = 0;//SelectProgram();
+
+			
+			Console.WriteLine(StringUtils.TestString());
 
 			switch(prog)
 			{
@@ -44,7 +48,7 @@ namespace EulerProject
 				try {
 					ret = Convert.ToInt32(str);
 				}
-				catch (FormatException || OverflowException) {
+				catch (Exception e) {
 					Console.Clear();
 					WriteProgramList();
 					Console.WriteLine("The value you entered is invalid.");
