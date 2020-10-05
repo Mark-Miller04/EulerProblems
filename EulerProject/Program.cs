@@ -11,11 +11,8 @@ namespace EulerProject
 
 		static void Main(string[] args)
 		{
-			//WriteProgramList();
-			int prog = 0;//SelectProgram();
-
-			
-			Console.WriteLine(StringUtils.TestString());
+			WriteProgramList();
+			int prog = SelectProgram();
 
 			switch(prog)
 			{
@@ -40,32 +37,24 @@ namespace EulerProject
 
 		private static int SelectProgram()
 		{
-			int ret = -1;
+			int ret = 0;
 			while (ret <= 0 || ret > programList.Length)
 			{
-				Console.WriteLine("Please enter a valid number from the list of programs.\n");
-				string str = Console.ReadLine();
+				Console.WriteLine("Please enter a valid number from the list of programs.");
 				try {
-					ret = Convert.ToInt32(str);
+					ret = StringUtils.StringToInt(Console.ReadLine());
+					if (ret <= 0 || ret > programList.Length) {
+						throw new ArgumentOutOfRangeException();
+					}
 				}
 				catch (Exception e) {
 					Console.Clear();
 					WriteProgramList();
-					Console.WriteLine("The value you entered is invalid.");
-					continue;
-				}
-
-				if (ret <= 0 || ret > programList.Length) {
-					Console.Clear();
-					WriteProgramList();
-					Console.WriteLine("The value you entered is invalid.");
-				}
-				else {
-					return ret;
+					Console.WriteLine(e.Message);
 				}
 			}
 
-			return 0;
+			return ret;
 		}
 
 		private static void Problem1()
