@@ -1,8 +1,7 @@
 ﻿using System;
 using UtilityLibrary;
 
-// TODO: Make program objects to simplify program operation process.
-// TODO: Add problem number, question, and solve method.
+
 // TODO: Add safe ways to accept any user input for all programs.
 
 namespace EulerProject
