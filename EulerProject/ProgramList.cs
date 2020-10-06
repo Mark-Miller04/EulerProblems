@@ -9,6 +9,7 @@ namespace EulerProject
 		{
 			{ 1, new Problem1() },
 			{ 2, new Problem2() },
+			{ 3, new Problem3() },
 		};
 	}
 }
