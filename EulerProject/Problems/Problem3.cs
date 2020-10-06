@@ -16,9 +16,9 @@ namespace EulerProject.Projects
 
 		public override void Solve()
 		{
-			ulong[] primes = MathUtils.GeneratePrimes(600851475143);
+			int[] primes = MathUtils.PrimeGeneratorLight(100);
+			//BigInteger[] primes = MathUtils.PrimeGeneratorHeavy(100);
 			Console.WriteLine(primes.ToString());
-
 			Console.WriteLine($"The largest prime factor is {primes[primes.Length - 1]}.");
 		}
 	}
