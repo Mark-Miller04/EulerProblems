@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EulerProject
+﻿namespace EulerProject
 {
 	/// <summary>
 	/// The determined efficiency of the problem's solve method.
@@ -14,18 +10,17 @@ namespace EulerProject
 	/// </summary>
 	public abstract class BaseProblem
 	{
-		public readonly int id;
-		public readonly string question;
-		public readonly BigO efficiency;
+		protected int _id;
+		public int ID => _id;
 
-		/// <param name="i">The problem number from ProjectEuler.net.</param>
-		/// <param name="que">A summary of the question being posed.</param>
-		/// <param name="eff">The proposed efficiency of the solve method.</param>
-		public BaseProblem(int i, string que, BigO eff)
-		{
-			id = i;
-			question = que;
-		}
+		protected string _tit;
+		public string Title => _tit;
+
+		protected string _que;
+		public string Question => _que;
+
+		protected BigO _eff;
+		public BigO Efficiency => _eff;
 
 		/// <summary>
 		/// Solves the problem, implemented in each independent problem instance.
