@@ -58,7 +58,7 @@ namespace EulerProject
 				Console.WriteLine($"{problem.Question}\n");
 				problem.Solve();
 			}
-			while (InputUtils.YesNoQuestion("Would you like to run this program again?"));
+			while (InputUtils.RequestYN("Would you like to run this program again?"));
 		}
 	}
 }
