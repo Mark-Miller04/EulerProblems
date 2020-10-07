@@ -22,6 +22,9 @@
 		protected BigO _eff;
 		public BigO Efficiency => _eff;
 
+		protected string _pro;
+		public string Prompt => _pro;
+
 		/// <summary>
 		/// Solves the problem, implemented in each independent problem instance.
 		/// </summary>
