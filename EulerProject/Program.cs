@@ -52,10 +52,13 @@ namespace EulerProject
 		private static void RunProgram(int id)
 		{
 			BaseProblem problem = ProgramList.List[id];
-			Console.Clear();
-			Console.WriteLine($"===== Problem {problem.ID} =====");
-			Console.WriteLine($"{problem.Question}\n");
-			problem.Solve();
+			do {
+				Console.Clear();
+				Console.WriteLine($"===== Problem {problem.ID} =====");
+				Console.WriteLine($"{problem.Question}\n");
+				problem.Solve();
+			}
+			while (InputUtils.YesNoQuestion("Would you like to run this program again?"));
 		}
 	}
 }

@@ -34,15 +34,15 @@ namespace EulerProject.Projects
 				string str = StringUtils.StringListFromInts(factors.ToArray());
 				Console.WriteLine("\n" + str + "\n");
 				Console.WriteLine($"There are {factors.Count} prime factors for the number {input}, listed above.");
-				Console.WriteLine($"Therefore, the largest prime factor of {input} is {high}.");
+				Console.WriteLine($"Therefore, the largest prime factor of {input} is {high}.\n");
 			}
 			else if (factors.Count == 1) {
-				Console.WriteLine($"There is only one prime factor for the number {input}, it is {factors[0]}");
-				Console.WriteLine($"Therefore, the largest prime factor of {input} is {high}.");
+				Console.WriteLine($"\nThere is only one prime factor for the number {input}, it is {factors[0]}");
+				Console.WriteLine($"Therefore, the largest prime factor of {input} is {high}.\n");
 			}
 			else {
-				Console.WriteLine($"The number {input} is prime itself!");
-				Console.WriteLine("Therefore, its highest prime factor is itself!");
+				Console.WriteLine($"\nThe number {input} is prime itself!");
+				Console.WriteLine("Therefore, its highest prime factor is itself!\n");
 			}
 		}
 	}
