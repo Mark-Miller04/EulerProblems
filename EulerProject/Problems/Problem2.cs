@@ -11,7 +11,7 @@ namespace EulerProject.Projects
 			_tit = "Even Fibonacci Numbers";
 			_que = "Find the sum of all even Fibonacci numbers that are less than 4 million.";
 			_pro = "Please enter an integer that you'd like to calculate up to:";
-			_eff = BigO.On;
+			_eff = BigO.Undetermined;
 		}
 
 		public override void Solve()

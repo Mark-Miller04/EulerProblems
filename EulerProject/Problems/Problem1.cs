@@ -10,7 +10,7 @@ namespace EulerProject.Projects
 			_tit = "Multiples of 3 and 5";
 			_que = "Find the sum of all the multiples of 3 or 5 below 1000.";
 			_pro = "Please enter an integer that you'd like to calculate up to:";
-			_eff = BigO.On;
+			_eff = BigO.Undetermined;
 		}
 
 		public override void Solve()

@@ -12,7 +12,7 @@ namespace EulerProject.Projects
 			_tit = "Largest Prime Factor";
 			_que = "What is the largest prime factor of the number 600,851,475,143?";
 			_pro = "Please enter an integer that you'd like to calculate up to:";
-			_eff = BigO.On;
+			_eff = BigO.Undetermined;
 		}
 
 		public override void Solve()

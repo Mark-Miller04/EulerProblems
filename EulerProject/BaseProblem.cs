@@ -3,7 +3,7 @@
 	/// <summary>
 	/// The determined efficiency of the problem's solve method.
 	/// </summary>
-	public enum BigO { O1, Ologn, Onlogn, On, On2 }
+	public enum BigO { Undetermined, O1, Ologn, Onlogn, On, On2 }
 	
 	/// <summary>
 	/// Base object for all Euler Problems. Contains a Solve() method to solve the problem.
