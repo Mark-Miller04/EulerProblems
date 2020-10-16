@@ -1,5 +1,7 @@
 ﻿using System;
 
+using MMNet.CSh.ConsoleApp;
+
 namespace EulerProject.Projects
 {
 	class Problem1 : BaseProblem
@@ -15,11 +17,11 @@ namespace EulerProject.Projects
 
 		public override void Solve()
 		{
-			int limit = UtilityLibrary.InputUtils.RequestInt(Prompt);
+			uint limit = Input.RequestUInt(Prompt);
 			
-			int sum = 0;
-			int count = 0;
-			int x = 3;
+			ulong sum = 0;
+			uint count = 0;
+			uint x = 3;
 			while (x < limit) {
 				sum += x;
 				count++;

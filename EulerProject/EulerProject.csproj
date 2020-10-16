@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="UtilityLibrary">
-      <HintPath>..\..\UtilityLibrary\UtilityLibrary\bin\Debug\netstandard2.0\UtilityLibrary.dll</HintPath>
+    <Reference Include="MMNet">
+      <HintPath>..\..\NetFramework\NetFramework\bin\Debug\netstandard2.0\MMNet.dll</HintPath>
     </Reference>
   </ItemGroup>
 

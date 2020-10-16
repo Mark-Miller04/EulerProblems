@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using UtilityLibrary;
+
+using MMNet.CSh.StringMM;
+using MMNet.CSh.ConsoleApp;
 
 // TODO: Add safe ways to accept any user input for all programs.
 
@@ -31,7 +33,7 @@ namespace EulerProject
 			{
 				Console.WriteLine("Please enter a valid number from the list of programs.");
 				try {
-					ret = StringUtils.StringToInt(Console.ReadLine());
+					ret = StringCompare.StringToInt(Console.ReadLine());
 					if (ProgramList.List.ContainsKey(ret)) {
 						isValidProgram = true;
 					}
@@ -58,7 +60,7 @@ namespace EulerProject
 				Console.WriteLine($"{problem.Question}\n");
 				problem.Solve();
 			}
-			while (InputUtils.RequestYN("Would you like to run this program again?"));
+			while (Input.RequestYN("Would you like to run this program again?"));
 		}
 	}
 }
