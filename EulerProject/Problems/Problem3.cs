@@ -37,7 +37,7 @@ namespace EulerProject.Projects
 			}
 
 			if(factors.Count > 1) {
-				string str = StringCompare.StringListFromInts(factors.ToArray());
+				string str = StringManip.StringListFromInts(factors.ToArray());
 				Console.WriteLine("\n" + str + "\n");
 				Console.WriteLine($"There are {factors.Count} prime factors for the number {input}, listed above.");
 				Console.WriteLine($"Therefore, the largest prime factor of {input} is {high}.\n");
