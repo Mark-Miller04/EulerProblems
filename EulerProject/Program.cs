@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using MMNet.CSh.StringMM;
 using MMNet.CSh.ConsoleApp;
 
 // TODO: Add safe ways to accept any user input for all programs.
@@ -12,13 +11,24 @@ namespace EulerProject
 	{
 		static void Main(string[] args)
 		{
-			WriteProgramList();
-			RunProgram(SelectProgram());
+			while(true)
+			{
+				WriteProgramList();
+				int prog = SelectProgram();
+				if (prog == 0) {
+					return;
+				}
+				else {
+					RunProgram(prog);
+				}
+			}
 		}
 
 		private static void WriteProgramList()
 		{
+			Console.Clear();
 			Console.WriteLine("===== Program List =====\n");
+			Console.WriteLine("Enter 0 to exit.");
 			foreach(KeyValuePair<int,BaseProblem> pair in ProgramList.List) {
 				Console.WriteLine($"{pair.Value.ID}: {pair.Value.Title}");
 			}
@@ -31,10 +41,9 @@ namespace EulerProject
 			bool isValidProgram = false;
 			while (!isValidProgram)
 			{
-				Console.WriteLine("Please enter a valid number from the list of programs.");
 				try {
-					ret = StringCompare.StringToInt(Console.ReadLine());
-					if (ProgramList.List.ContainsKey(ret)) {
+					ret = Input.RequestInt("Please enter a valid number from the list of programs.");
+					if (ProgramList.List.ContainsKey(ret) || ret == 0) {
 						isValidProgram = true;
 					}
 					else {
@@ -42,7 +51,6 @@ namespace EulerProject
 					}
 				}
 				catch (Exception e) {
-					Console.Clear();
 					WriteProgramList();
 					Console.WriteLine(e.Message);
 				}
@@ -55,10 +63,7 @@ namespace EulerProject
 		{
 			BaseProblem problem = ProgramList.List[id];
 			do {
-				Console.Clear();
-				Console.WriteLine($"===== Problem {problem.ID} =====");
-				Console.WriteLine($"{problem.Question}\n");
-				problem.Solve();
+				problem.Run();
 			}
 			while (Input.RequestYN("Would you like to run this program again?"));
 		}

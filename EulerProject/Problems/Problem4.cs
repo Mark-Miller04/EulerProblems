@@ -14,7 +14,7 @@ namespace EulerProject.Projects
 			_eff = BigO.Undetermined;
 		}
 
-		public override void Solve()
+		protected override void Solve()
 		{
 			
 		}

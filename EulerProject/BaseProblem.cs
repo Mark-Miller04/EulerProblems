@@ -1,4 +1,6 @@
-﻿namespace EulerProject
+﻿using System;
+
+namespace EulerProject
 {
 	/// <summary>
 	/// The determined efficiency of the problem's solve method.
@@ -25,9 +27,22 @@
 		protected string _pro;
 		public string Prompt => _pro;
 
+		public void Run()
+		{
+			Clear();
+			Solve();
+		}
+
+		protected void Clear()
+		{
+			Console.Clear();
+			Console.WriteLine($"===== Problem {ID} =====");
+			Console.WriteLine($"{Question}\n");
+		}
+
 		/// <summary>
 		/// Solves the problem, implemented in each independent problem instance.
 		/// </summary>
-		public abstract void Solve();
+		protected abstract void Solve();
 	}
 }
