@@ -1,4 +1,4 @@
-﻿using EulerProject.Projects;
+﻿using EulerProject.Problems;
 using System.Collections.Generic;
 
 namespace EulerProject
@@ -11,6 +11,7 @@ namespace EulerProject
 			{ 2, new Problem2() },
 			{ 3, new Problem3() },
 			{ 4, new Problem4() },
+			{ 5, new Problem5() }
 		};
 	}
 }

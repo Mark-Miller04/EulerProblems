@@ -2,7 +2,7 @@
 
 using MMNet.CSh.ConsoleApp;
 
-namespace EulerProject.Projects
+namespace EulerProject.Problems
 {
 	class Problem2 : BaseProblem
 	{

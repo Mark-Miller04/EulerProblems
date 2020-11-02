@@ -3,7 +3,7 @@
 using MMNet.CSh.ConsoleApp;
 using MMNet.CSh.StringMM;
 
-namespace EulerProject.Projects
+namespace EulerProject.Problems
 {
 	class Problem4 : BaseProblem
 	{
