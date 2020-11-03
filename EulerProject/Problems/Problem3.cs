@@ -50,6 +50,10 @@ namespace EulerProject.Problems
 				Console.WriteLine($"\nThe number {input} is prime itself!");
 				Console.WriteLine("Therefore, its highest prime factor is itself!\n");
 			}
+
+			int x = Input.RequestInt("..");
+			int[] y = Primes.Generate(x);
+			Console.WriteLine($"The largest index generated from {x} is {y.Length}.");
 		}
 	}
 }

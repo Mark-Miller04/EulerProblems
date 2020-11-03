@@ -3,8 +3,6 @@ using System.Collections.Generic;
 
 using MMNet.CSh.ConsoleApp;
 
-// TODO: Add safe ways to accept any user input for all programs.
-
 namespace EulerProject
 {
 	class Program
